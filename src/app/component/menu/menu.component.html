@@ -1,0 +1,49 @@
+<header class="wrapper bimage">
+
+    <input type="checkbox" id="show_search">
+    <h1 routerLink="/" class="logo">Verblio</h1>
+    <h1 routerLink="/" class="logo_2">VB</h1>
+
+
+    <div class="search_class" >
+
+        <form action="" class="search_box" method="get"  >
+
+            <input class="search_bar" type="text" placeholder="Search for Conferences..">
+
+          <button class="go_icon"   type="submit" > <img class="search-icon" src="./assets/search.svg"></button>
+
+        </form>
+
+    </div>  
+    <div class="login_btn" *ngIf="auth.isLoggedIn() == false" >
+        <a class="cta" href=""><button class="btn_sign btn_2">Login</button></a>
+    </div>
+    <div class="login_btn"  *ngIf="auth.isLoggedIn() == true">
+        <a class="cta" href="" (click)="Logout()" ><button class="btn_sign">Logout</button></a>
+    </div>
+</header>
+<!-- ========================================================================= -->
+
+<div class="main_dropdown_container">
+   
+  
+    <div class="dropdown_logo_bar_li" (click)="toggle_bar()" id="toggle_bar"><i class="dropdown_logo_bar bar " >
+        <img src="./assets/icons8-menu.svg" style="width:8vw;">
+    </i></div>
+
+    <nav class="navbar_container toggle">
+            <div class="main_navbar">
+               
+                <ul class="main_navbar_ul">
+                
+                    <li class="navbar_level_1_li" routerLink="/conference" style="cursor:pointer;"><a class="navbar_level_1_link">Conferences</a></li>
+                    <li class="navbar_level_1_li" routerLink="/about" style="cursor:pointer;"><a  class="navbar_level_1_link">About</a></li>
+                </ul>
+
+
+
+            </div>
+    </nav>
+</div>
+
