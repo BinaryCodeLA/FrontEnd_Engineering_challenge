@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit {
       this.authService.isLogin = true;
       window.location.href="/conference";
     }
+
   }
 
   Login(): void {
